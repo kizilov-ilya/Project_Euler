@@ -37,7 +37,7 @@ print(f"------ {time.time() - start_time} seconds ------")
 # Another way to solve the problem...
 
 def fibonacci_list():
-    fb = [1, 2]
+    fb = [1, 2]  # default
     while fb[-1] < 4000000:
         fb.append(fb[-1] + fb[-2])
 
