@@ -30,7 +30,7 @@ print('answer is ', problem())
 print(f"------ {time.time() - start_time} seconds ------")
 
 
-# P.s. usings lists like list[-1] + list[-2] working faster
+# P.s. using lists like list[-1] + list[-2] working faster
 # Instagram, ProjectEuler.net: ilya._romanovich
 # Telegram: @kizilov_elijah
 
