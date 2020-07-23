@@ -27,6 +27,25 @@ def problem():
 
 print('answer is ', problem())
 
+
 # P.s. usings lists like list[-1] + list[-2] working faster
 # Instagram, ProjectEuler.net: ilya._romanovich
 # Telegram: @kizilov_elijah
+
+# Another way to solve the problem...
+
+def fibonacci_list():
+    fb = [1, 2]
+    while fb[-1] < 4000000:
+        fb.append(fb[-1] + fb[-2])
+
+    return fb
+
+
+def solution(fb=fibonacci_list()):
+    print('new func')
+    answer = sum([n for n in fb if n % 2 == 0])
+    return answer
+
+
+print('answer is ', solution())
