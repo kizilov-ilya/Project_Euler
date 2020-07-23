@@ -3,6 +3,7 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
+import time
 
 
 def fibonacci(n):
@@ -20,12 +21,13 @@ def problem():
         else:
             sequence.append(fibonacci(m))
             m += 1
-            print(sequence[-1])
     answer = sum([n for n in sequence if n % 2 == 0])
     return answer
 
 
+start_time = time.time()
 print('answer is ', problem())
+print(f"------ {time.time() - start_time} seconds ------")
 
 
 # P.s. usings lists like list[-1] + list[-2] working faster
@@ -43,9 +45,10 @@ def fibonacci_list():
 
 
 def solution(fb=fibonacci_list()):
-    print('new func')
     answer = sum([n for n in fb if n % 2 == 0])
     return answer
 
 
+start_time = time.time()
 print('answer is ', solution())
+print(f"------ {time.time() - start_time} seconds ------")
